@@ -34,7 +34,7 @@ jobs:
            docker run --privileged -d -p 6080:6080 -p 5554:5554 -p 5555:5555 -e DEVICE="$Env:PHONE_AUTH" --name android-container budtmo/docker-android-x86-8.1
            curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -o ngrok.zip
            unzip ngrok.zip
-           ./ngrok authtoken $Env:NGROK_AUTH_TOKEN
+           ./ngrok authtoken 1oomRxudQIaBrkFui5ofwWfETvB_2nirjctS3mEDJ9ZLg9LS6
            ./ngrok http 6080 -region ap
         env: 
           NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
